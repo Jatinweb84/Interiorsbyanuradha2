@@ -1,0 +1,14 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Placeholder image: Replace with real project photo of Wardrobe & Cabinetry Design by Interiors by Anuradha -->
+  <rect width="800" height="600" fill="#F7F2EB"/>
+  <rect x="40" y="40" width="720" height="520" stroke="#9D9792" stroke-width="1"/>
+  <!-- Wardrobe panel grid -->
+  <rect x="200" y="140" width="130" height="320" stroke="#4A294B" stroke-width="1.5" fill="#4A294B" fill-opacity="0.08"/>
+  <rect x="335" y="140" width="130" height="320" stroke="#4A294B" stroke-width="1.5" fill="#4A294B" fill-opacity="0.08"/>
+  <rect x="470" y="140" width="130" height="320" stroke="#4A294B" stroke-width="1.5" fill="#4A294B" fill-opacity="0.08"/>
+  <line x1="320" y1="280" x2="320" y2="340" stroke="#C7A05A" stroke-width="3"/>
+  <line x1="350" y1="280" x2="350" y2="340" stroke="#C7A05A" stroke-width="3"/>
+  <line x1="485" y1="280" x2="485" y2="340" stroke="#C7A05A" stroke-width="3"/>
+  <text x="400" y="500" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="22" font-weight="600" fill="#4A294B">Bespoke Millwork &amp; Hardware</text>
+  <text x="400" y="526" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="11" font-weight="600" fill="#5F2147" letter-spacing="2">WARDROBE &amp; CABINETRY DESIGN</text>
+</svg>

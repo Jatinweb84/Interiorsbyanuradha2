@@ -1,0 +1,27 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- NOTE: Placeholder image for Interiors by Anuradha. Replace with real project photo: Wall with decorative moulding and cornices (Residential) -->
+  <rect width="800" height="600" fill="#F7F2EB"/>
+  
+  <!-- Cornice molding top bar -->
+  <rect x="40" y="40" width="720" height="35" fill="#4A294B" fill-opacity="0.1" stroke="#9D9792" stroke-width="1.5"/>
+  <line x1="40" y1="75" x2="760" y2="75" stroke="#C7A05A" stroke-width="2"/>
+  
+  <!-- Wall decorative frames / wainscoting panels -->
+  <rect x="80" y="110" width="180" height="320" fill="none" stroke="#4A294B" stroke-width="2"/>
+  <rect x="95" y="125" width="150" height="290" fill="none" stroke="#C7A05A" stroke-width="1"/>
+  
+  <rect x="290" y="110" width="220" height="320" fill="none" stroke="#4A294B" stroke-width="2"/>
+  <rect x="305" y="125" width="190" height="290" fill="none" stroke="#C7A05A" stroke-width="1"/>
+  <!-- Central medallion / sconce -->
+  <circle cx="400" cy="220" r="24" stroke="#5F2147" stroke-width="1.5" fill="#F7F2EB"/>
+  <circle cx="400" cy="220" r="10" fill="#C7A05A"/>
+
+  <rect x="540" y="110" width="180" height="320" fill="none" stroke="#4A294B" stroke-width="2"/>
+  <rect x="555" y="125" width="150" height="290" fill="none" stroke="#C7A05A" stroke-width="1"/>
+
+  <!-- Baseboard trim -->
+  <rect x="40" y="450" width="720" height="25" fill="#4A294B" fill-opacity="0.1" stroke="#9D9792" stroke-width="1"/>
+
+  <text x="400" y="525" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="22" font-weight="600" fill="#4A294B">Wall Moulding &amp; Cornice Detailing</text>
+  <text x="400" y="555" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="11" font-weight="600" fill="#5F2147" letter-spacing="2">CLASSIC ARCHITECTURAL TRIM</text>
+</svg>

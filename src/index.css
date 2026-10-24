@@ -1,0 +1,272 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #F7F2EB;
+  --color-plum: #4A294B;
+  --color-wine: #5F2147;
+  --color-gold: #C7A05A;
+  --color-grey: #9D9792;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: "Manrope", system-ui, -apple-system, sans-serif;
+    color: #4A294B;
+    background-color: #F7F2EB;
+  }
+
+  /* Scroll-margin-top equal to 80px navbar height so headings are not hidden */
+  section[id],
+  div[id="top"] {
+    scroll-margin-top: 80px;
+  }
+
+  body {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #4A294B;
+    background-color: #F7F2EB;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-cormorant {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+
+  /* Global visible gold focus outline for WCAG AA compliance across interactive elements - no transition delay */
+  :focus-visible {
+    outline: 2px solid #C7A05A !important;
+    outline-offset: 2px !important;
+    transition: none !important;
+  }
+
+  /* Logo brand wordmark: never show an outline or border */
+  .logo-wordmark,
+  .logo-wordmark:focus,
+  .logo-wordmark:focus-visible,
+  .logo-wordmark:active {
+    outline: none !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Swipe-up cue button: never show an outline or border */
+  .cue-button,
+  .cue-button:focus,
+  .cue-button:focus-visible,
+  .cue-button:active {
+    outline: none !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
+
+/* Custom typography scale specified in design requirements */
+.headline-h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 1.05;
+  font-weight: 600;
+}
+
+.headline-h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(36px, 4.5vw, 56px);
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.headline-h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.eyebrow-light {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  color: #5F2147; /* wine on cream */
+}
+
+.eyebrow-dark {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  color: #C7A05A; /* gold on plum/wine */
+}
+
+/* =========================================================================
+   SCROLL-REVEAL ANIMATIONS (Native CSS + IntersectionObserver)
+   Only active when JavaScript is running (scoped to html.js).
+   Fallback: if JS fails or is disabled, elements remain fully visible.
+   ========================================================================= */
+
+/* Section headers: fade up 16px to 0, 600ms ease-out */
+html.js .reveal-header {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+html.js .reveal-header.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cards (Services, Projects, Reviews, Process): fade up 20px to 0, 600ms ease-out */
+html.js .reveal-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+html.js .reveal-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger by 80ms per item within grid, capped at 400ms */
+html.js .stagger-1 { transition-delay: 0ms; }
+html.js .stagger-2 { transition-delay: 80ms; }
+html.js .stagger-3 { transition-delay: 160ms; }
+html.js .stagger-4 { transition-delay: 240ms; }
+html.js .stagger-5 { transition-delay: 320ms; }
+html.js .stagger-6,
+html.js .stagger-7,
+html.js .stagger-8,
+html.js .stagger-9,
+html.js .stagger-10,
+html.js .stagger-11,
+html.js .stagger-12 { transition-delay: 400ms; }
+
+/* The "Why Choose Us" portrait: fade in and scale from 0.98 to 1, 600ms ease-out */
+html.js .reveal-portrait {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+  will-change: opacity, transform;
+}
+html.js .reveal-portrait.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stats row figures: fade in, 400ms */
+html.js .reveal-stat {
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+  will-change: opacity;
+}
+html.js .reveal-stat.is-visible {
+  opacity: 1;
+}
+
+/* =========================================================================
+   HOVER & FOCUS
+   ========================================================================= */
+
+/* Service and project cards: lift 4px with soft plum shadow, 300ms ease */
+.card-hover-lift {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease, background-color 300ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .card-hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -4px rgba(74, 41, 75, 0.14), 0 4px 8px -2px rgba(74, 41, 75, 0.08);
+  }
+}
+
+/* Button color transitions: 150ms ease color transition only, no scale effects */
+.btn-transition {
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+/* Hero load animation (existing) */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade-up {
+  animation: heroFadeUp 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+html.js .hero-content-pending {
+  opacity: 0;
+}
+
+/* =========================================================================
+   PREFERS-REDUCED-MOTION (Accessibility)
+   Disable all scroll behaviors, transforms, and transitions
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html.js .reveal-header,
+  html.js .reveal-card,
+  html.js .reveal-portrait,
+  html.js .reveal-stat {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .card-hover-lift:hover {
+    transform: none !important;
+  }
+
+  .animate-hero-fade-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* =========================================================================
+   INTRO LOADER & CUE ANIMATION
+   ========================================================================= */
+@keyframes cueBob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-cue-bob {
+  animation: cueBob 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-cue-bob {
+    animation: none !important;
+  }
+}
+

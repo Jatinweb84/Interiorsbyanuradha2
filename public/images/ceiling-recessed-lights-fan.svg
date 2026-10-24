@@ -1,0 +1,27 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- NOTE: Placeholder image for Interiors by Anuradha. Replace with real project photo: Ceiling with recessed lights and a fan (Residential) -->
+  <rect width="800" height="600" fill="#F7F2EB"/>
+  
+  <!-- False ceiling layer with step profile -->
+  <rect x="50" y="50" width="700" height="420" fill="#4A294B" fill-opacity="0.05" stroke="#9D9792" stroke-width="1.5"/>
+  <rect x="120" y="100" width="560" height="320" fill="#5F2147" fill-opacity="0.06" stroke="#C7A05A" stroke-width="2"/>
+  
+  <!-- Recessed circular lights -->
+  <circle cx="200" cy="160" r="12" fill="#F7F2EB" stroke="#C7A05A" stroke-width="2"/>
+  <circle cx="200" cy="160" r="6" fill="#C7A05A"/>
+  <circle cx="600" cy="160" r="12" fill="#F7F2EB" stroke="#C7A05A" stroke-width="2"/>
+  <circle cx="600" cy="160" r="6" fill="#C7A05A"/>
+  <circle cx="200" cy="360" r="12" fill="#F7F2EB" stroke="#C7A05A" stroke-width="2"/>
+  <circle cx="200" cy="360" r="6" fill="#C7A05A"/>
+  <circle cx="600" cy="360" r="12" fill="#F7F2EB" stroke="#C7A05A" stroke-width="2"/>
+  <circle cx="600" cy="360" r="6" fill="#C7A05A"/>
+
+  <!-- Ceiling Fan Hub & Blades -->
+  <circle cx="400" cy="260" r="22" fill="#4A294B" stroke="#C7A05A" stroke-width="2"/>
+  <path d="M400 238 L400 130 Q390 120 375 130 L395 240 Z" fill="#5F2147"/>
+  <path d="M418 274 L520 330 Q530 315 520 300 L412 265 Z" fill="#5F2147"/>
+  <path d="M382 274 L280 330 Q270 315 280 300 L388 265 Z" fill="#5F2147"/>
+
+  <text x="400" y="520" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="22" font-weight="600" fill="#4A294B">Ceiling with Recessed Lights &amp; Fan</text>
+  <text x="400" y="550" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="11" font-weight="600" fill="#5F2147" letter-spacing="2">ARCHITECTURAL CEILING DETAILS</text>
+</svg>
